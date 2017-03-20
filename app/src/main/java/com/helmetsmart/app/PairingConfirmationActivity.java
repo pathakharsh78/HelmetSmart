@@ -3,6 +3,9 @@ package com.helmetsmart.app;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+/**
+ * Pairing Confirmation Activity
+ */
 public class PairingConfirmationActivity extends AppCompatActivity {
 
     @Override
