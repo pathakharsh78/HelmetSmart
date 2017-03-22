@@ -1,13 +1,20 @@
 <resources>
     <string name="app_name">HelmetSmart</string>
-    
+
     <!--Pairing Configuration Screen-->
     <string name="str_pairing_confirmation">Pairing Confirmation</string>
     <string name="str_helmet_to_connect">Do you have a HelmetSmart\nSensor to connect to?</string>
     <string name="btn_yes_connect">Yes, Connect</string>
     <string name="btn_no_connect">No, Go To App</string>
 
+    <!--Connect to HelmetSmart Screen-->
+    <string name="str_connect_helmet_smart">Connect to HelmetSmart</string>
+    <string name="str_helmet_smart_found">HelmetSmart is found.\nIs this the number\nyou see on your device?</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+
     <!--Custom Fonts-->
     <string name="SetAppFont">fonts/Avenir-Roman.ttf</string>
+    <string name="HelmetNo">fonts/Assistant-ExtraLight.ttf</string>
 
 </resources>

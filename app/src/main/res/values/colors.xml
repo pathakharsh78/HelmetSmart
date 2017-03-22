@@ -6,4 +6,6 @@
 
     <color name="btn_color">#34A7A5</color>
     <color name="btn_border">#A3BCC9</color>
+    <color name="device_number">#27A9D6</color>
+    <color name="transparent_black">#50000000</color>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,6 +14,7 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/txtMsgHaveHelmet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -26,9 +26,11 @@
             android:textSize="22sp" />
 
         <ImageView
+            android:id="@+id/imgHelmets"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
             android:scaleType="centerInside"
             android:src="@drawable/ic_helmets" />
 
@@ -37,8 +39,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:orientation="vertical"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/btnYes"
@@ -46,10 +48,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/btn_background"
-                android:paddingTop="8dp"
                 android:paddingBottom="8dp"
                 android:paddingLeft="24dp"
                 android:paddingRight="24dp"
+                android:paddingTop="8dp"
                 android:text="@string/btn_yes_connect"
                 android:textAllCaps="true"
                 android:textColor="@android:color/white" />
@@ -61,10 +63,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/btn_background"
-                android:paddingTop="8dp"
                 android:paddingBottom="8dp"
                 android:paddingLeft="24dp"
                 android:paddingRight="24dp"
+                android:paddingTop="8dp"
                 android:text="@string/btn_no_connect"
                 android:textAllCaps="true"
                 android:textColor="@android:color/white" />

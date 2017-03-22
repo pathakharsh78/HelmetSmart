@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
+    android:orientation="vertical"
+    tools:context="com.helmetsmart.app.activity.ConnectHelmetSmartActivity"
+    tools:ignore="MissingPrefix">
+
+    <include layout="@layout/toolbar_custom_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imgConnectHelmet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_connect_helmet" />
+
+            <TextView
+                android:id="@+id/txtMsgDeviceFound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgConnectHelmet"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/str_helmet_smart_found"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtHelmetNo"
+                fontPath="@string/HelmetNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMsgDeviceFound"
+                android:background="@color/transparent_black"
+                android:gravity="center"
+                android:text="4360"
+                android:textColor="@color/device_number"
+                android:textSize="70sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/txtHelmetNo"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <Button
+                    android:id="@+id/btnYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_background"
+                    android:paddingLeft="74dp"
+                    android:paddingRight="74dp"
+                    android:text="@string/btn_yes"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btnNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_background"
+                    android:paddingLeft="74dp"
+                    android:paddingRight="74dp"
+                    android:text="@string/btn_no"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

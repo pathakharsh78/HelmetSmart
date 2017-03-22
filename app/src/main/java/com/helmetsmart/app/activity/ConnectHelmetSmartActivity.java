@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.helmetsmart.app.R;
 
@@ -15,15 +16,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-/**
- * Pairing Confirmation Activity
- */
-public class PairingConfirmationActivity extends AppCompatActivity implements View.OnClickListener {
+public class ConnectHelmetSmartActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.txtToolbarTitle)
     TextView txtToolbarTitle;
     @BindView(R.id.imgBackArrow)
     ImageView imgBackArrow;
+    @BindView(R.id.txtHelmetNo)
+    TextView txtHelmetNo;
     @BindView(R.id.btnYes)
     Button btnYes;
     @BindView(R.id.btnNo)
@@ -32,7 +32,7 @@ public class PairingConfirmationActivity extends AppCompatActivity implements Vi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pairing_confirmation);
+        setContentView(R.layout.activity_connect_hemlet_smart);
         init();
     }
 
@@ -41,17 +41,13 @@ public class PairingConfirmationActivity extends AppCompatActivity implements Vi
      */
     private void init() {
         ButterKnife.bind(this);
-        txtToolbarTitle.setText(getString(R.string.str_pairing_confirmation));
+        txtToolbarTitle.setText(getString(R.string.str_connect_helmet_smart));
+        txtHelmetNo.setText("4360");
 
         //Handling Click Listener for Views
         imgBackArrow.setOnClickListener(this);
         btnYes.setOnClickListener(this);
         btnNo.setOnClickListener(this);
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     @Override
@@ -61,12 +57,16 @@ public class PairingConfirmationActivity extends AppCompatActivity implements Vi
                 onBackPressed();
                 break;
             case R.id.btnYes:
-                Intent intent = new Intent(getApplicationContext(), ConnectHelmetSmartActivity.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Connected", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btnNo:
                 finish();
                 break;
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }
