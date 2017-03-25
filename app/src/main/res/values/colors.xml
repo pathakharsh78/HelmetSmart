@@ -8,4 +8,9 @@
     <color name="btn_border">#A3BCC9</color>
     <color name="device_number">#27A9D6</color>
     <color name="transparent_black">#50000000</color>
+    <color name="grey_back">#F6F6F6</color>
+    <color name="yellow">#E7A800</color>
+    <color name="dark_text">#353535</color>
+    <color name="colorAccentLight">#336B85</color>
+    <color name="lightGrey">#D6E1E7</color>
 </resources>

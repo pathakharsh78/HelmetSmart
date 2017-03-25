@@ -22,6 +22,9 @@
         <activity
             android:name=".activity.ConnectHelmetSmartActivity"
             android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.HelmetSmartActivity"
+            android:screenOrientation="sensorPortrait" />
     </application>
 
 </manifest>

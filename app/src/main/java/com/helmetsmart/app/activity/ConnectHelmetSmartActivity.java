@@ -58,6 +58,8 @@ public class ConnectHelmetSmartActivity extends AppCompatActivity implements Vie
                 break;
             case R.id.btnYes:
                 Toast.makeText(getApplicationContext(), "Connected", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), HelmetSmartActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btnNo:
                 finish();

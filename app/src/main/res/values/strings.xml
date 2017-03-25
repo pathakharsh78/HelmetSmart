@@ -17,4 +17,13 @@
     <string name="SetAppFont">fonts/Avenir-Roman.ttf</string>
     <string name="HelmetNo">fonts/Assistant-ExtraLight.ttf</string>
 
+    <!--HelmetSmart Main Screen-->
+    <string name="str_helmet">Helmet</string>
+    <string name="str_speed">Speed</string>
+    <string name="str_wore_helmet">Wore helmet today for</string>
+    <string name="str_average_speed">Average speed was</string>
+    <string name="str_riding_activity">Riding Activity</string>
+    <string name="str_my_community">My Community</string>
+    <string name="str_news_feed">NewsFeed</string>
+    
 </resources>
