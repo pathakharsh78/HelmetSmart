@@ -16,6 +16,9 @@
     <!--Custom Fonts-->
     <string name="SetAppFont">fonts/Avenir-Roman.ttf</string>
     <string name="HelmetNo">fonts/Assistant-ExtraLight.ttf</string>
+    <string name="ProgressTitle">fonts/MyriadPro-Regular.otf</string>
+    <string name="Nirmala">fonts/NirmalaB.ttf</string>
+    <string name="Gadugi">fonts/gadugi.ttf</string>
 
     <!--HelmetSmart Main Screen-->
     <string name="str_helmet">Helmet</string>
@@ -25,5 +28,14 @@
     <string name="str_riding_activity">Riding Activity</string>
     <string name="str_my_community">My Community</string>
     <string name="str_news_feed">NewsFeed</string>
-    
+
+    <!--My Trips Screen-->
+    <string name="str_my_trips">My Trips</string>
+    <string name="str_wore_today">Wore helmet\ntoday</string>
+    <string name="str_distance">Distance\nCovered</string>
+    <string name="str_avg_speed">Average Speed</string>
+    <string name="str_with_helmet">with Helmet</string>
+    <string name="str_road">Road</string>
+    <string name="str_today">Today</string>
+
 </resources>

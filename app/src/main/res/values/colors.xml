@@ -13,4 +13,7 @@
     <color name="dark_text">#353535</color>
     <color name="colorAccentLight">#336B85</color>
     <color name="lightGrey">#D6E1E7</color>
+    <color name="progressColor">#68C6C3</color>
+    <color name="text_color">#292929</color>
+    <color name="divider">#59879C</color>
 </resources>

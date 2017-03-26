@@ -1,39 +1,36 @@
 package com.helmetsmart.app.activity;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.helmetsmart.app.R;
+import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class HelmetSmartActivity extends AppCompatActivity implements View.OnClickListener {
+public class MyTripsActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.txtToolbarTitle)
     TextView txtToolbarTitle;
     @BindView(R.id.imgMenu)
     ImageView imgMenu;
-    @BindView(R.id.txtTime)
-    TextView txtTime;
-    @BindView(R.id.txtSpeedAvg)
-    TextView txtSpeedAvg;
-    @BindView(R.id.cardRidingActivity)
-    CardView cardRidingActivity;
+    @BindView(R.id.progressHelmet)
+    CircularProgressBar progressHelmet;
+    @BindView(R.id.progressSpeed)
+    CircularProgressBar progressSpeed;
+    @BindView(R.id.progressDistance)
+    CircularProgressBar progressDistance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_helmet_smart);
+        setContentView(R.layout.activity_my_trips);
         init();
     }
 
@@ -42,16 +39,15 @@ public class HelmetSmartActivity extends AppCompatActivity implements View.OnCli
      */
     private void init() {
         ButterKnife.bind(this);
-        txtToolbarTitle.setText(getString(R.string.app_name));
-        txtToolbarTitle.setCompoundDrawablePadding(8);
-        txtToolbarTitle.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_white_helmet_actionbar, 0, 0, 0);
+        txtToolbarTitle.setText(getString(R.string.str_my_trips));
 
-        txtTime.setText("57 min");
-        txtSpeedAvg.setText("36 km/hr");
+        int animationDuration = 2500; // 2500ms = 2,5s
+        progressHelmet.setProgressWithAnimation(40, animationDuration);
+        progressSpeed.setProgressWithAnimation(60, animationDuration);
+        progressDistance.setProgressWithAnimation(75, animationDuration);
 
         //Handling Click Listener for Views
         imgMenu.setOnClickListener(this);
-        cardRidingActivity.setOnClickListener(this);
     }
 
     @Override
@@ -63,10 +59,6 @@ public class HelmetSmartActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.imgMenu:
-                break;
-            case R.id.cardRidingActivity:
-                Intent intent = new Intent(getApplicationContext(), MyTripsActivity.class);
-                startActivity(intent);
                 break;
         }
     }
